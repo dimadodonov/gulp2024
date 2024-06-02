@@ -3,9 +3,7 @@
 @import 'base/all';
 
 // Libs
-@import 'swiper/swiper-bundle';
-@import '@fancyapps/ui/dist/fancybox/fancybox';
-@import '/node_modules/animate.css/animate.min.css';
+// @import '@fancyapps/ui/dist/fancybox/fancybox';
 
 // Customization libs
 @import 'custom';
@@ -13,7 +11,7 @@
 // Import site components
 // @import 'components/breadcrumbs';
 // @import 'components/pagination';
-@import 'components/buttons';
+// @import 'components/buttons';
 
 // @import 'components/input';
 
@@ -21,25 +19,7 @@
 @import 'main';
 
 // Import site layouts
-// @import 'layout/about';
-// @import 'layout/calendar';
-@import 'layout/faq';
-@import 'layout/footer';
-@import 'layout/form';
 @import 'layout/header';
 
-// @import 'layout/numbersabout';
-// @import 'layout/psychologist';
-// @import 'layout/psychotype';
-// @import 'layout/quickresults';
-// @import 'layout/reviews';
-@import 'layout/section';
-
-// @import 'layout/sidebar';
-@import 'layout/step';
-
 // Import pages
-// @import 'pages/archive';
-// @import 'pages/blog';
-// @import 'pages/corp';
 // @import 'pages/page';
