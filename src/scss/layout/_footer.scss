@@ -1,0 +1,190 @@
+.footer {
+    position: relative;
+    padding-top: 50px;
+    overflow: hidden;
+
+    &__row {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 24px;
+
+        @include md-block() {
+            flex-direction: column;
+            margin: 0 15px;
+            gap: 20px;
+        }
+    }
+
+    &__col {
+        width: calc(1 / 4 * 100% - 24px);
+
+        @include md-block() {
+            width: 100%;
+            padding: 10px 0;
+        }
+
+        &:nth-child(1) {
+            @include md-block() {
+                order: 4;
+            }
+        }
+    }
+
+    &__bottom {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        margin-top: 30px;
+        padding: 30px 0 50px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+        @include md-block() {
+            flex-direction: column;
+            border-top: 1px solid transparent;
+            gap: 20px;
+        }
+    }
+
+    &__logo {
+        margin: 30px 0;
+
+        &--span {
+            display: block;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+
+        &--wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+
+            @include md-block() {
+                justify-content: flex-start;
+            }
+        }
+
+        span {
+            display: block;
+            margin: 20px 0;
+            color: #000;
+            font-size: 16px;
+        }
+    }
+
+    &__copy {
+        max-width: 760px;
+        color: #777;
+        font-size: 14px;
+
+        @include xl-block() {
+            max-width: 620px;
+        }
+
+        @include lg-block() {
+            max-width: 460px;
+        }
+
+        @include md-block() {
+            order: 1;
+            font-size: 12px;
+        }
+    }
+
+    .container {
+        position: relative;
+    }
+
+    &-nav {
+        padding: 0 10px;
+
+        &__title {
+            position: relative;
+            margin-bottom: 10px;
+            color: #000;
+            font-family: $f-bold;
+            font-size: 24px;
+
+            a {
+                color: currentcolor;
+                cursor: default;
+            }
+        }
+
+        ul {
+            list-style: none;
+
+            li {
+                margin-top: 10px;
+                color: #777;
+                font-size: 16px;
+
+                a {
+                    color: currentcolor;
+                    font-size: inherit;
+                    font-size: 14px;
+
+                    &:hover {
+                        opacity: 0.8;
+                        cursor: pointer;
+                    }
+                }
+
+                span {
+                    display: block;
+                }
+
+                strong {
+                    display: block;
+                    color: black;
+                    font-family: $f-bold;
+                    font-size: 18px;
+                    font-weight: normal;
+                }
+            }
+        }
+    }
+
+    &-callback {
+        display: inline-flex;
+        align-items: center;
+        margin-top: 10px;
+        padding: 7px 20px 7px 7px;
+        border-radius: 30px;
+        background: #fff;
+        box-shadow: 0 0 38px 0 rgba(120, 121, 123, 0.1);
+        cursor: pointer;
+        gap: 14px;
+
+        span {
+            color: #303030;
+            font-size: 14px;
+        }
+    }
+
+    &-btn {
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+        gap: 5px;
+
+        @include md-block() {
+            order: 0;
+            margin-left: 0;
+        }
+
+        &__wrap {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        span {
+            font-size: 14px;
+        }
+    }
+}

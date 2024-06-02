@@ -1,0 +1,190 @@
+.faq {
+    width: 100%;
+
+    &__wrap {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__collapse {
+        &-item {
+            margin-bottom: 20px;
+            padding: 10px;
+            transform: translate3d(0, 0, 0);
+            transition: $trs;
+            border-radius: 15px;
+            background-color: #fff;
+            box-shadow: 0 0 43px 0 rgba(0, 0, 1, 0.04);
+
+            @include xl-block() {
+                margin-bottom: 15px;
+            }
+
+            &:hover {
+                transform: translateX(10px);
+            }
+
+            &-main {
+                border: 1px solid #f7f7f9;
+                border-radius: 15px;
+            }
+
+            &-header {
+                display: flex !important;
+                align-items: center;
+                justify-content: space-between;
+                height: 68px;
+                padding: 0 30px;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+
+                &:not(.collapsed) .faq__collapse-item-btn::before {
+                    transform: rotate(180deg);
+                }
+            }
+
+            &-title {
+                font-size: 20px;
+                font-weight: 500;
+
+                @include sm-block() {
+                    font-size: 13px;
+                }
+            }
+
+            &-btn {
+                position: relative;
+                display: flex;
+                flex-shrink: 0;
+                align-items: center;
+                justify-content: center;
+                width: 40px;
+                height: 40px;
+                padding: 12.5px;
+                border-radius: 20px;
+                background: linear-gradient(
+                    174deg,
+                    #53c4d0 3.78%,
+                    #008a99 94.73%
+                );
+
+                @include sm-block() {
+                    width: 28px;
+                    height: 28px;
+                }
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 14px;
+                    height: 14px;
+                    transform: rotate(0deg);
+                    transition: $trs;
+                    background: url('/build/files/icons/svg/icon--faq-arrow.svg')
+                        no-repeat;
+                    background-size: cover;
+                }
+            }
+
+            &-content {
+                margin: 0 30px;
+                transition: $trs;
+                box-shadow: inset 1px 4px 0 -3px #f7f7f9;
+
+                @include sm-block() {
+                    padding: 10px 0;
+                }
+
+                p {
+                    margin: 0;
+                    padding: 15px 0;
+                    font-size: 14px;
+
+                    @include sm-block() {
+                        padding: 5px 0;
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+
+    &-form {
+        margin-top: 0 !important;
+    }
+
+    &-app {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 30px;
+        padding: 10px;
+
+        border-radius: 15px;
+        background: #fff;
+
+        box-shadow: 0 0 43px 0 rgba(0, 0, 1, 0.04);
+        gap: 0;
+
+        &__wrap {
+            position: relative;
+            padding: 15px;
+            border: 1px solid #e2e2e2;
+            border-radius: 15px;
+
+            &::before {
+                content: '';
+                position: absolute;
+                right: 8px;
+                bottom: 0;
+                width: 70px;
+                height: 111px;
+                background-image: url('/build/images/faq-app.png');
+                background-size: cover;
+            }
+        }
+
+        span {
+            display: block;
+            width: 80%;
+            font-size: 13px;
+
+            ins {
+                color: #53c4d0;
+                text-decoration: none;
+            }
+        }
+    }
+
+    &-group {
+        display: flex;
+        margin-top: 30px;
+        gap: 40px;
+
+        @include xl-block() {
+            gap: 20px;
+        }
+
+        @include lg-block() {
+            flex-direction: column;
+            gap: 0;
+        }
+
+        &__item {
+            width: calc(50% - 20px);
+
+            @include lg-block() {
+                width: calc(50% - 10px);
+            }
+
+            @include lg-block() {
+                width: 100%;
+            }
+        }
+    }
+}
+
+// .faq

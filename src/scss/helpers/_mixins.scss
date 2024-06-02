@@ -1,0 +1,45 @@
+//transition
+@mixin tr($time: 0.35s, $what: all, $why: ease) {
+    -webkit-transition: $what $time $why;
+    -moz-transition: $what $time $why;
+    -ms-transition: $what $time $why;
+    -o-transition: $what $time $why;
+    transition: $what $time $why;
+}
+
+@mixin placeholder {
+    &:-ms-input-placeholder {
+        @content;
+    }
+
+    &:-moz-placeholder {
+        @content;
+    }
+
+    &::-moz-placeholder {
+        @content;
+    }
+
+    &::-webkit-input-placeholder {
+        @content;
+    }
+
+    &::placeholder {
+        @content;
+    }
+}
+
+// font-family
+@mixin font($alias, $family, $name) {
+    @font-face {
+        font-family: $alias;
+        font-style: normal;
+        font-weight: normal;
+        src:
+            url('../files/fonts/' + $family + '/' + $name + '.woff2')
+                format('woff2'),
+            url('../files/fonts/' + $family + '/' + $name + '.woff')
+                format('woff');
+        font-display: swap;
+    }
+}

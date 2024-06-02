@@ -1,0 +1,42 @@
+# Numerous always-ignore extensions
+*.diff
+*.err
+*.orig
+*.log
+*.rej
+*.swo
+*.swp
+*.zip
+*.7zip
+*.vi
+*.bat
+*.sql
+*~
+
+# OS or Editor folders
+.DS_Store
+._*
+Thumbs.db
+.cache
+.project
+.settings
+.tmproj
+*.esproj
+nbproject
+*.sublime-project
+*.sublime-workspace
+.idea
+.vscode
+
+# Folders to ignore
+.sass-cache
+.tmp
+_tmp
+build
+public
+assets
+node_modules
+bower_components
+src/js/temp/
+src/files/symbols.html
+package-lock.json

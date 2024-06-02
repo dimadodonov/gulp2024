@@ -1,0 +1,19 @@
+{
+    "extends": ["prettier"],
+    "parser": "@babel/eslint-parser",
+    "env": {
+        "browser": true,
+        "es6": true,
+        // "commonjs": true,
+        "jquery": true
+    },
+    "rules": {
+        // "import/no-extraneous-dependencies": [
+        //     "error",
+        //     { "devDependencies": ["gulpfile.babel.js", "gulp/**/*"] }
+        // ],
+        "jsx-quotes": [1, "prefer-double"],
+        "no-debugger": 2
+    },
+    "plugins": ["prettier"]
+}

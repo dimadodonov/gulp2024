@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+html {
+    @include xs-block() {
+        height: 100%;
+    }
+
+    &.is-fixed {
+        overflow: hidden;
+
+        body,
+        .page__wrapper,
+        .page__content {
+            overflow: hidden;
+        }
+    }
+
+    &.no-touch-events {
+        .wrapper,
+        .wrapper__inner {
+            pointer-events: none;
+            touch-action: none;
+        }
+    }
+}
+
+body {
+    position: relative;
+    width: 100%;
+    min-width: 320px;
+    height: 100%;
+    overflow-x: hidden;
+    background-color: $bg-color;
+    color: $color-text;
+    font-family: $f;
+    font-size: $base-font-size;
+    font-weight: $base-font-weight;
+    line-height: $base-line-height;
+
+    &.is-fixed,
+    &.fancybox-enabled {
+        overflow: hidden;
+    }
+
+    //body.is-fixed || .fancybox-enabled
+}
+
+//body
+
+img {
+    display: block;
+    max-width: 100%;
+    margin: 0;
+}
+
+iframe {
+    border: 0;
+}
+
+select {
+    width: 100%;
+    outline: none;
+    background-color: transparent;
+
+    option {
+        &[disabled] {
+            color: $gray--light;
+        }
+    }
+}
+
+label {
+    input[type='file'] {
+        display: none;
+    }
+}
+
+.main {
+    flex: 1;
+}
+
+//.main
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+
+    @include xs-block() {
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+
+    @include from(375px) {
+        max-width: 375px;
+    }
+
+    @include from(576px) {
+        max-width: 576px;
+    }
+
+    @include from(768px) {
+        max-width: 768px;
+    }
+
+    @include from(1024px) {
+        max-width: 960px;
+    }
+
+    @include from(1200px) {
+        max-width: 1160px;
+    }
+}
+
+//.container

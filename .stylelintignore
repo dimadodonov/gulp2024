@@ -1,0 +1,9 @@
+node_modules/**/*.*
+bower_components/**/*.*
+gulp/**/*.*
+src/libs/**/*.*
+src/scss/_lib/**/*.*
+src/scss/base/**/*.*
+src/scss/helpers/**/*.*
+src/scss/generated/**/*.*
+src/scss/custom/*.*
